@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("assets/fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(235, 18%, 26%);
+  font-size: 0.9rem;
+  font-family: "Roboto-Regular";
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: "Roboto-Bold";
+}
+.main-container {
+  background-color: white;
+  height: 65%;
+  width: 45%;
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.text-container {
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.custom-list {
+  list-style: none;
+  padding-left: 0px;
+}
+.custom-list li {
+  background-image: url("assets/images/icon-list.svg");
+  background-repeat: no-repeat;
+  padding-left: 2rem;
+  padding-bottom: 10px;
+  padding-top: 3px;
+}
+.texts {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+#error-message {
+  margin: 0px 1rem 0 auto;
+  color: rgb(255, 0, 0);
+}
+.error-styling {
+  background-color: rgba(255, 0, 0, 0.17);
+  color: rgba(236, 36, 36, 0.552);
+}
+
+#email {
+  height: 2.5rem;
+  width: 90%;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid gray;
+}
+#email:focus {
+  outline: none;
+  border: 1px solid black;
+}
+.submit-btn {
+  height: 3rem;
+  width: 95%;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  background-color: hsl(234, 29%, 20%);
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: 0 2px 3px hsl(4, 21%, 59%);
+}
+.image-container {
+  background-image: url("assets/images/illustration-sign-up-desktop.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 12px;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 1.2rem;
+  }
+  .main-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 35% 65%;
+    border-radius: 0;
+  }
+
+  .image-container {
+    background-image: url("assets/images/illustration-sign-up-mobile.svg");
+    grid-row: 1;
+    margin: 0;
+    background-size: cover;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .text-container {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+}
